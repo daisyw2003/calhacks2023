@@ -1,4 +1,8 @@
-.Rproj.user
-.Rhistory
+*.db
+*.py[cod]
 .RData
+.Rhistory
+.Rproj.user
 .Ruserdata
+.web
+__pycache__/
