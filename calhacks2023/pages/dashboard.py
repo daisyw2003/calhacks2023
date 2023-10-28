@@ -15,7 +15,7 @@ def dashboard() -> rx.Component:
         rx.heading("Dashboard", font_size="3em"),
         rx.text("Welcome to Reflex!"),
         rx.text(
-            "You can edit this page in lemme see if this changes",
+            "You can edit this page in lemme see",
             rx.code("{your_app}/pages/dashboard.py"),
         ),
     )
