@@ -12,11 +12,14 @@ class QueryForm(State):
     def handle_submit(self, form_data: dict):
         """Handle the form submit."""
         self.form_data = form_data
-        name_list = self.form_data["Name"].split(",").strip()
-        email_list = self.form_data["Email"].split(",").strip()
+        self.output = pd.DataFrame({'Name':[], 'Email':[], 'Task':[], 'Day':[], 'Time_Start':[], 'Time_End':[]})
+        name_list = self.form_data["name"].split(",")
+        email_list = self.form_data["email"].split(",")
 
-        for name, email in name_list, email_list:
-            new_record = self.dat.loc[self.dat["Name"] == name].loc[self.dat["Email"] == email]
+        for name, email in zip(name_list, email_list):
+            temp_name = name.strip()
+            temp_email = email.strip()
+            new_record = self.dat.loc[self.dat["Name"] == temp_name].loc[self.dat["Email"] == temp_email]
             self.output = pd.concat([self.output, new_record], ignore_index = True)
        
 
@@ -34,12 +37,9 @@ def multi_user_lookup():
         rx.form(
             rx.vstack(
                 rx.input(
-                    placeholder="Name",
-                    id="name",
-                ),
+                    placeholder="Name", id="name"),
                 rx.input(
-                    placeholder="Email", id="email"
-                ),
+                    placeholder="Email", id="email"),
                 rx.button("Submit", type_="submit"),
             ),
             on_submit=QueryForm.handle_submit,
