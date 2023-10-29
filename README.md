@@ -13,7 +13,7 @@ So far we have our database where you can add tasks and look up yours or someone
 
 ### What's to be Done
 
-1. We hope to include a visual where you can see the calendar blocks lined up side by side as well as make it color-customizable. This way it can be more visual and easier to understand.
+1. We hope to include a visual where you can see the calendar blocks lined up side by side as well as make it color-customizable. This way it can be more visual and easier to understand. We can do this once I figure out how to wrap the React Calendar properly.
 2. We hope to include a feature that automatically produces all of the "free time" between two ore more people, aka when are both people available according to the task manager.
     
     a. Along with this we hope that one day we can incldue a geographical feature to recommend locations for these free blocks of time by either finding a close location based on the users' last location (so where they listed their location in their task before) or their 'Home' location.
