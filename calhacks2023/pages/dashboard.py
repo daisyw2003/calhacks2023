@@ -39,7 +39,7 @@ class fullCalendar(rx.Component):
     plugins: rx.Var[List[object]]= ["dayGridPlugin"]
     initialView: rx.Var[List[str]] = ["dayGridMonth"]
     lib_dependencies: list[str] = ["@fullcalendar/daygrid"]
-
+    
 full_calendar = fullCalendar.create 
     
 class Spline(rx.Component):
