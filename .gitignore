@@ -1,8 +1,8 @@
-*.db
-*.py[cod]
-.RData
-.Rhistory
-.Rproj.user
-.Ruserdata
-.web
+*.db
+*.py[cod]
+.RData
+.Rhistory
+.Rproj.user
+.Ruserdata
+.web
 __pycache__/
