@@ -1,73 +1,19 @@
-# Welcome to Reflex!
+# Welcome to Our Custom Task Manager
 
-This is the base Reflex template - installed when you run `reflex init`.
+While this is not a complete project is, please check out User Database to see how our tasks are managed.
 
-If you want to use a different template, pass the `--template` flag to `reflex init`.
-For example, if you want a more basic starting point, you can run:
+## About Our Project
 
-```bash
-reflex init --template blank
-```
+Oftentimes, it's a hassle to have to move between your calendar of events and filling out your availabilities in something like a When2Meet or a LettuceMeet. With our task manager, we're hoping to be able to combine the two into one webapp where you can put in all your tasks and time, and easily be able to look up your friends' availabilities!
 
-## About this Template
+### What We Have So Far
 
-This template has the following directory structure:
-
-```bash
-├── README.md
-├── assets
-├── rxconfig.py
-└── {your_app}
-    ├── __init__.py
-    ├── components
-    │   ├── __init__.py
-    │   └── sidebar.py
-    ├── pages
-    │   ├── __init__.py
-    │   ├── dashboard.py
-    │   ├── index.py
-    │   └── settings.py
-    ├── state.py
-    ├── styles.py
-    ├── templates
-    │   ├── __init__.py
-    │   └── template.py
-    └── {your_app}.py
-```
-
-See the [Project Structure docs](https://reflex.dev/docs/getting-started/project-structure/) for more information on general Reflex project structure.
-
-### Adding Pages
-
-In this template, the pages in your app are defined in `{your_app}/pages/`.
-Each page is a function that returns a Reflex component.
-For example, to edit this page you can modify `{your_app}/pages/index.py`.
-See the [pages docs](https://reflex.dev/docs/components/pages/) for more information on pages.
-
-In this template, instead of using `rx.add_page` or the `@rx.page` decorator,
-we use the `@template` decorator from `{your_app}/templates/template.py`.
-
-To add a new page:
-
-1. Add a new file in `{your_app}/pages/`. We recommend using one file per page, but you can also group pages in a single file.
-2. Add a new function with the `@template` decorator, which takes the same arguments as `@rx.page`.
-3. Import the page in your `{your_app}/pages/__init__.py` file and it will automatically be added to the app.
+So far we have our database where you can add tasks and look up yours or someone else's tasks using their name and email. This is in Single User Entry and Lookup. Since as of now, it's for personal use, there are no passwords or such, but one could be implement if needed. You can also look up multiple people's tasks and times, however, you cannot add any one the Multi-User Lookup page.
 
 
-### Adding Components
+### What's to be Done
 
-In order to keep your code organized, we recommend putting components that are
-used across multiple pages in the `{your_app}/components/` directory.
+1. We hope to include a visual where you can see the calendar blocks lined up side by side as well as make it color-customizable. This way it can be more visual and easier to understand.
+2. We hope to include a feature that automatically produces all of the "free time" between two ore more people, aka when are both people available according to the task manager.
+    a. Along with this we hope that one day we can incldue a geographical feature to recommend locations for these free blocks of time by either finding a close location based on the users' last location (so where they listed their location in their task before) or their 'Home' location.
 
-In this template, we have a sidebar component in `{your_app}/components/sidebar.py`.
-
-### Adding State
-
-In this template, we define the base state of the app in `{your_app}/state.py`.
-The base state is useful for general app state that is used across multiple pages.
-
-In this template, the base state handles the toggle for the sidebar.
-
-As your app grows, we recommend using [substates](https://reflex.dev/docs/state/substates/)
-to organize your state. You can either define substates in their own files, or if the state is
-specific to a page, you can define it in the page file itself.
